@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="46" height="43" viewBox="0 0 46 43">
+  <defs>
+    <filter id="Rectangle_2" x="0" y="0" width="46" height="43" filterUnits="userSpaceOnUse">
+      <feOffset dx="2" dy="4" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-color="#005bca" flood-opacity="0.494"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="share_scr_home_icon" transform="translate(-34 -38)">
+    <g id="computer" transform="translate(41 43)">
+      <g transform="matrix(1, 0, 0, 1, -7, -5)" filter="url(#Rectangle_2)">
+        <path id="Rectangle_2-2" data-name="Rectangle 2" d="M19,25H9a1,1,0,1,1,0-2H19a1,1,0,0,1,0,2Zm3-3H6a6.007,6.007,0,0,1-6-6V6A6.007,6.007,0,0,1,6,0H22a6.007,6.007,0,0,1,6,6V16A6.007,6.007,0,0,1,22,22ZM21.017,6.291h0l0,0L17.33,9.944a.854.854,0,0,0,0,1.212.875.875,0,0,0,1.224,0L22.243,7.5V9.14a.871.871,0,0,0,1.48.611.917.917,0,0,0,.257-.613l0-3.71a.858.858,0,0,0-.248-.606.878.878,0,0,0-.612-.246l-3.748,0a.86.86,0,1,0,0,1.719Z" transform="translate(7 5)" fill="#fff"/>
+      </g>
+    </g>
+  </g>
+</svg>

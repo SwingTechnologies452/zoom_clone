@@ -3,24 +3,24 @@
  * Copyright (c) 1/3/2021.
  * Developed by Debojyoti Singha
  */
-
 import 'dart:io';
 import 'dart:ui';
 
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/foundation.dart' as Foundation;
 import 'package:flutter/material.dart';
-import 'package:flutter_base_template/custom_views/ProgressBarDialog.dart';
-import 'package:flutter_base_template/utils/BaseMisc.dart';
-import 'package:flutter_base_template/utils/Helper.dart';
-import 'package:flutter_base_template/utils/Utils.dart';
-import 'package:flutter_base_template/utils/size_config.dart';
-import 'package:flutter_offline/flutter_offline.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:universal_platform/universal_platform.dart';
+import 'package:zoom_clone/custom_views/ProgressBarDialog.dart';
+import 'package:zoom_clone/utils/Helper.dart';
+import 'package:zoom_clone/utils/size_config.dart';
 
 abstract class BaseScreenState<T extends StatefulWidget> extends State<T>
     with TickerProviderStateMixin {
   AnimationController _controller;
   ProgressBarDialog _progressDialog;
+  int screenType = -1;
 
   BaseScreenState() {
     // Parent constructor
@@ -40,29 +40,15 @@ abstract class BaseScreenState<T extends StatefulWidget> extends State<T>
 
   Widget defaultWidget() {
     return SafeArea(
-      child: OfflineBuilder(
-        connectivityBuilder: (
-          BuildContext context,
-          ConnectivityResult connectivity,
-          Widget child,
-        ) {
-          if (connectivity == ConnectivityResult.none) {
-            return Container(
-                color: HexColor(BaseColors.mainColor),
-                height: ScreenUtil().screenHeight,
-                width: ScreenUtil().screenWidth,
-                child: Center(
-                  child: Text(
-                    "No Internet.",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(color: Colors.white),
-                  ),
-                ));
-          }
-          return child;
-        },
-        child: onCreateWidget(),
-      ),
+      child: Builder(builder: (context) {
+        if (UniversalPlatform.isWeb) {
+          screenType = 1;
+          return onCreateWebWidget(screenType, context);
+        } else {
+          screenType = 2;
+          return onCreateMobileWidget(screenType, context);
+        }
+      }),
     );
   }
 
@@ -70,7 +56,9 @@ abstract class BaseScreenState<T extends StatefulWidget> extends State<T>
 
   void onDisposeMethod();
 
-  Widget onCreateWidget();
+  Widget onCreateMobileWidget(int screenType, BuildContext buildContext);
+
+  Widget onCreateWebWidget(int screenType, BuildContext buildContext);
 
   bool isCancelable();
 
@@ -102,7 +90,12 @@ abstract class BaseScreenState<T extends StatefulWidget> extends State<T>
   void showToast(String message) {
     Fluttertoast.showToast(
         msg: message, timeInSecForIosWeb: 2, gravity: ToastGravity.CENTER);
-    print("BASE_MESSAGE: " + message);
+  }
+
+  void showLog(String msg) {
+    if (!Foundation.kReleaseMode) {
+      print("BASE_MESSAGE: " + msg);
+    }
   }
 
   void showProgressBar() {

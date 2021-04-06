@@ -9,8 +9,8 @@ import 'dart:ui';
 
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_base_template/utils/BaseMisc.dart';
-import 'package:flutter_base_template/utils/Utils.dart';
+import 'package:zoom_clone/utils/BaseMisc.dart';
+import 'package:zoom_clone/utils/Utils.dart';
 
 class ProgressBarDialog {
   /// BuildContext to show dialog in
@@ -149,7 +149,7 @@ class _ProgressBarDialogWidget extends StatelessWidget {
                 child: CircularProgressIndicator(
               valueColor: animationController.drive(ColorTween(
                   begin: HexColor(BaseColors.mainColor),
-                  end: HexColor(BaseColors.lightPurpleColor))),
+                  end: HexColor(BaseColors.orangeColor))),
             )));
   }
 

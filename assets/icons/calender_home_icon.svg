@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="46" height="47" viewBox="0 0 46 47">
+  <defs>
+    <filter id="Rectangle_11" x="0" y="0" width="46" height="47" filterUnits="userSpaceOnUse">
+      <feOffset dx="2" dy="4" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-color="#005bca" flood-opacity="0.494"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Path_2" x="11.15" y="1.15" width="7.7" height="14.7" filterUnits="userSpaceOnUse">
+      <feOffset dy="2" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="1" result="blur-2"/>
+      <feFlood flood-color="#005bca" flood-opacity="0.494"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Path_2_Copy" x="23.15" y="1.15" width="7.7" height="14.7" filterUnits="userSpaceOnUse">
+      <feOffset dy="2" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="1" result="blur-3"/>
+      <feFlood flood-color="#005bca" flood-opacity="0.494"/>
+      <feComposite operator="in" in2="blur-3"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="calender_home_icon" transform="translate(-34 -36)">
+    <g id="Calendar" transform="translate(41 39)">
+      <g transform="matrix(1, 0, 0, 1, -7, -3)" filter="url(#Rectangle_11)">
+        <path id="Rectangle_11-2" data-name="Rectangle 11" d="M22,29H6a6.007,6.007,0,0,1-6-6V6A6.007,6.007,0,0,1,6,0H22a6.007,6.007,0,0,1,6,6V23A6.007,6.007,0,0,1,22,29ZM20,2.9a1.97,1.97,0,0,0-2,1.933,2,2,0,0,0,4,0A1.97,1.97,0,0,0,20,2.9ZM8,2.9A1.97,1.97,0,0,0,6,4.833a2,2,0,0,0,4,0A1.97,1.97,0,0,0,8,2.9Z" transform="translate(7 5)" fill="#fff"/>
+      </g>
+      <text id="_20" data-name="20" transform="translate(6 28)" fill="#0e78f9" font-size="14" font-family="SegoeUI, Segoe UI"><tspan x="0" y="0">20</tspan></text>
+      <g transform="matrix(1, 0, 0, 1, -7, -3)" filter="url(#Path_2)">
+        <path id="Path_2-2" data-name="Path 2" d="M.5,7V0" transform="translate(14.5 3)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.7"/>
+      </g>
+      <g transform="matrix(1, 0, 0, 1, -7, -3)" filter="url(#Path_2_Copy)">
+        <path id="Path_2_Copy-2" data-name="Path 2 Copy" d="M.5,7V0" transform="translate(26.5 3)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="1.7"/>
+      </g>
+    </g>
+  </g>
+</svg>

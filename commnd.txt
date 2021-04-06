@@ -1,0 +1,4 @@
+flutter build web --web-renderer html --release
+flutter run -d chrome --web-renderer html
+flutter run -d edge --web-renderer html
+flutter run -d edge --web-hostname localhost --web-port 4520

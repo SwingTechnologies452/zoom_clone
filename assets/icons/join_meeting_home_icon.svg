@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48" height="48" viewBox="0 0 48 48">
+  <defs>
+    <filter id="Rectangle_11" x="0" y="0" width="48" height="48" filterUnits="userSpaceOnUse">
+      <feOffset dx="2" dy="4" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-color="#005bca" flood-opacity="0.494"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="join_meeting_home_icon" transform="translate(-33 -35)">
+    <g id="Camera_red" data-name="Camera red" transform="translate(40 40)">
+      <g transform="matrix(1, 0, 0, 1, -7, -5)" filter="url(#Rectangle_11)">
+        <path id="Rectangle_11-2" data-name="Rectangle 11" d="M22,30H8a8.009,8.009,0,0,1-8-8V8A8.009,8.009,0,0,1,8,0H22a8.009,8.009,0,0,1,8,8V22A8.009,8.009,0,0,1,22,30ZM10,14a1,1,0,1,0,0,2h4v4a1,1,0,1,0,2,0V16h4a1,1,0,1,0,0-2H16V10a1,1,0,1,0-2,0v4Z" transform="translate(7 5)" fill="#fff"/>
+      </g>
+    </g>
+  </g>
+</svg>
